@@ -1,6 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
+//tailwind 系统样式
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
@@ -13,6 +15,7 @@ export default defineConfig({
     plugins: [
         vue(),
         vueDevTools(),
+        tailwindcss(),
         AutoImport({
             resolvers: [ElementPlusResolver()],
         }),
