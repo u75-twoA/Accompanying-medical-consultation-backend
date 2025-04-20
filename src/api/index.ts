@@ -42,3 +42,15 @@ export function updateUser(data: any) {
 export function menuPermissions() {
     return request.get('/menu/permissions')
 }
+//陪护师头像
+export const photoList = () => {
+    return request.get('/photo/list')
+}
+// 陪护师创建
+export const companion = (data: any) => {
+    return request.post('/companion', data)
+}
+// 陪护列表
+export const companionList = (params: any) => {
+    return request.get('/companion/list', { params })
+}
